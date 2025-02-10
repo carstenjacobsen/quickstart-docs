@@ -1,3 +1,9 @@
+---
+title: Quickstart
+description: Quickstart is a local Stellar network environment (node) for development and testing.
+sidebar_position: 90
+---
+
 # Quickstart
 
 Quickstart is a local Stellar network environment (node) that allows developers to run a local version of the Stellar network for development and testing. Quickstart runs a local version of Stellar Core, Horizon, RPC, and everything else needed to replicate the public network.
