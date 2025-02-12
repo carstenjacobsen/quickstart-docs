@@ -23,7 +23,6 @@ Deploying a smart contract to Quickstart testnet is not very different from depl
 stellar contract deploy \ --network local \ --source-account bob \ --rpc-url http://localhost:8000/rpc \ --wasm target/wasm32-unknown- unknown/release/hello_world.wasm --network-passphrase "Test SDF Network ; September 2015"
 
 <Tabs groupId="platform" defaultValue={getPlatform()}>
-
 <TabItem value="unix" label="macOS/Linux">
 
 ```sh
@@ -31,8 +30,6 @@ stellar contract deploy \
   --wasm target/wasm32-unknown-unknown/release/hello_world.wasm \
   --source bob \
   --network local \
-  --rpc-url http://localhost:8000/rpc \
-  --network-passphrase "Test SDF Network ; September 2015"
   --alias hello_world
 ```
 
@@ -43,20 +40,25 @@ stellar contract deploy \
 ```powershell
 stellar contract deploy `
   --wasm target/wasm32-unknown-unknown/release/hello_world.wasm `
-  --source alice `
-  --network testnet `
+  --source bob `
+  --network local `
   --alias hello_world
 ```
 
 </TabItem>
-
 </Tabs>
 
 
 Invoke contract
 Now you have deployed the smart contract to the Quickstart testnet, you can also invoke it:
 
-stellar contract invoke \ --id CBIVWSMHU...62VB7S2OI73C \ --source bob \ --network testnet \ -- \ hello \ --to RPC
+stellar contract invoke \ 
+  --id hello_world \ 
+  --source bob \
+  --network local \ 
+  -- \ 
+  hello \ 
+  --to RPC
 
 
 That’s it!
