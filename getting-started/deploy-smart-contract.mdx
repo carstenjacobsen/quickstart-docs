@@ -20,8 +20,6 @@ The identity will have a private and a public key, and can be called by the name
 ## Deploy contract
 Deploying a smart contract to Quickstart testnet is not very different from deploying a smart contract to the public testnet. Specify the RPC URL to be Quickstart’s and you can deploy it:
 
-stellar contract deploy \ --network local \ --source-account bob \ --rpc-url http://localhost:8000/rpc \ --wasm target/wasm32-unknown- unknown/release/hello_world.wasm --network-passphrase "Test SDF Network ; September 2015"
-
 <Tabs groupId="platform" defaultValue={getPlatform()}>
 
 <TabItem value="unix" label="macOS/Linux">
@@ -54,6 +52,11 @@ stellar contract deploy `
 Invoke contract
 Now you have deployed the smart contract to the Quickstart testnet, you can also invoke it:
 
+<Tabs groupId="platform" defaultValue={getPlatform()}>
+
+<TabItem value="unix" label="macOS/Linux">
+
+```sh
 stellar contract invoke \ 
   --id hello_world \ 
   --source bob \
@@ -61,7 +64,25 @@ stellar contract invoke \
   -- \ 
   hello \ 
   --to RPC
+```
 
+</TabItem>
+
+<TabItem value="windows" label="Windows (PowerShell)">
+
+```powershell
+stellar contract invoke ` 
+  --id hello_world ` 
+  --source bob `
+  --network local ` 
+  -- ` 
+  hello ` 
+  --to RPC
+```
+
+</TabItem>
+
+</Tabs>
 
 That’s it!
 
