@@ -6,7 +6,9 @@ description: Quickstart supports the network modes local, testnet, futurenet and
 
 # Network Modes
 
-Quickstart can operate in different network modes, and you need to decide which mode is suitable for your purpose before starting the container. The four available network modes are , local, testnet, futurenet, and pubnet (mainnet).  
+Quickstart can operate in different network modes, and you need to decide which mode is suitable for your purpose before starting the container. The four available network modes are ***local***, ***testnet***, ***futurenet*** and ***pubnet*** (mainnet).  
+
+The [Stellar Lab](https://lab.stellar.org) can connect to Quickstart, which makes it easy to create and fund accounts.
 
 ## Local
 The local network mode allows you to customize Quickstart by adding parameters to the container start command. The available parameters are:
@@ -36,12 +38,12 @@ Public Key: GBZXN7PIRZGNMHGA7MUUUF4GWPY5AYPV6LY4UV2GL6VJGIQRXFDNMADI<br />
 Secret Key: SC5O7VZUXDJ6JBDSZ74DSERXL7W3Y5LTOAMRF7RQRL3TAGAPS7LUVG3L 
 ```
 
-The root account is derived from the network passphrase and if the network passphrase is changed, the root account will change. To retrieve the root account details when changing the network passphrase, view the logs for stellar-core on its first start. See Viewing logs for more details. 
+The root account is derived from the network passphrase and if the network passphrase is changed, the root account will change. To retrieve the root account details when changing the network passphrase, view the logs for stellar-core on its first start. See [Viewing](https://github.com/stellar/quickstart?tab=readme-ov-file#viewing-logs) logs for more details. 
 
 In local network mode, a ledger occurs every one second and so transactions are finalized faster than on deployed networks. 
 
 ## Testnet
-The testnet network mode is recommended for software development. Accounts created on the testnet can be funded with Friendbot (faucet) so you don’t have to worry about losing real tokens when testing your software. The Stellar Lab can connect to Quickstart, which makes it easy to create and fund accounts.
+The testnet network mode is recommended for software development. Accounts created on the testnet can be funded with Friendbot (faucet) so you don’t have to worry about losing real tokens when testing your software. 
 
 ## Futurenet
 The futurenet network mode works like the testnet, and the biggest difference is that it contains the latest bleeding-edge features that haven’t made it to testnet yet. This can be useful for developers building smart contracts that rely on new features that are not available on testnet, or test existing smart contracts ahead of changes to test- and mainnet.
